@@ -1,48 +1,64 @@
 # ChatGPT EDU Research Assistant
 
-A multilingual Workspace Agent and skill bundle for university and research-institute workflows in Kazakhstan.
+Ғылыми әдебиет, зерттеу мониторингі, Қазақстан гранттары және SPSS/jamovi бойынша қазақша, орысша және ағылшынша жұмыс істейтін плагин.
 
-## Open the agent
+This repository contains an installable six-skill ChatGPT/Codex plugin and a GitHub marketplace catalog. It does not require an MCP server, API key, or a new external app connection. Tool availability still depends on the host workspace.
 
-[ChatGPT EDU Research Assistant](https://chatgpt.com/agents/a/agt_6aa91eea812881a4a8421047e2d5909b)
+## Install in ChatGPT EDU
 
-The deployed agent is currently private to its owner in the ChatGPT Edu workspace. This link does not grant access to other users.
+For a one-time installation, download `chatgpt-edu-research-assistant-v1.0.1.tar.gz`, then use **Admin > Plugins > Add > Upload plugin**. After adding it to the workspace, install it in your own account from the plugin directory. The ZIP is the original Agent Builder bundle, not the ChatGPT plugin-upload format.
 
-## Download the bundle
+GitHub synchronization requires an authorized GitHub connection and may require MFA. Without that connection, use the archive installation; it does not enable automatic synchronization.
 
-The GitHub repository distributes the complete source as `chatgpt-edu-research-assistant.zip`. Download and extract that archive to obtain `.codex-plugin/`, `skills/`, and `packages/`. The `packages/` directory contains six separate skill ZIP files ready for the Agent Builder upload control.
+A workspace administrator can import this repository using **Admin > Plugins > Add > Import marketplace**:
+
+- Source: `https://github.com/nurzhanabdirazakov/chatgpt-edu-research-assistant`
+- Path: leave empty.
+- Branch, tag, or commit: leave empty for the default branch, or pin a reviewed commit.
+
+Review the source and the trust prompt. Authorize GitHub only for repositories needed for this import. Review import results and plugin access policies, then install **ChatGPT EDU Research Assistant** from the workspace plugin directory in your own account. Importing a marketplace is not the same as personally installing its plugin. Do not choose workspace-wide automatic installation unless that is intended.
+
+GitHub-managed marketplaces may sync updates daily. Review source changes before merging. See [OpenAI's marketplace import documentation](https://learn.chatgpt.com/docs/enterprise/plugin-management).
 
 ## Included skills
 
-1. `chatgpt-edu-research-assistant` — routes cross-stage requests.
-2. `literature-review-helper` — verified literature evidence workbench.
-3. `living-knowledge-monitor` — recurring research-intelligence digests.
-4. `kazakhstan-science-grants` — grant-application development.
-5. `kz-research-funding-readiness` — eligibility and submission audit.
-6. `spss-jamovi-teacher` — beginner-friendly statistics teaching.
+1. `chatgpt-edu-research-assistant` — coordinates cross-stage research requests.
+2. `literature-review-helper` — literature search, evidence maps, and source-grounded synthesis.
+3. `living-knowledge-monitor` — research-intelligence digests; scheduling requires an explicitly configured host task.
+4. `kazakhstan-science-grants` — Kazakhstan grant application development.
+5. `kz-research-funding-readiness` — eligibility, evidence, and submission-readiness audits.
+6. `spss-jamovi-teacher` — statistics teaching and interpretation in SPSS/jamovi.
 
-## ChatGPT EDU setup
-
-1. In ChatGPT, open **Agents** and select **Create**.
-2. Use the name and description in `AGENT_INSTRUCTIONS.md`.
-3. In the builder, upload the six ZIP files from the extracted `packages/` directory.
-4. Paste the Workspace Agent instructions and add the starter prompts.
-5. Enable Web search and Data analysis if these controls are available in your workspace. Add institution-approved apps as needed. The deployed version has no additional app connections or automatic schedules configured.
-6. Preview with the scenarios in `TEST_PLAN.md`, then create the agent and choose the appropriate workspace access level.
-
-ChatGPT EDU availability and permissions depend on workspace administrator settings.
+The five supplied source skills retain their supporting resources. Version 1.0.1 removes the unsupported `policy.products` metadata field; the skill instructions are unchanged. The sixth skill is the coordinating router. The assistant must not invent citations, eligibility decisions, datasets, analysis results, or scheduled monitoring.
 
 ## Repository layout
 
-- `.codex-plugin/plugin.json` — plugin metadata.
-- `skills/` — the six reusable skills and their resources.
-- `AGENT_INSTRUCTIONS.md` — ready-to-paste Workspace Agent configuration.
-- `TEST_PLAN.md` — acceptance tests before publishing.
+```text
+.agents/plugins/marketplace.json
+plugins/chatgpt-edu-research-assistant/
+  .codex-plugin/plugin.json
+  assets/
+  skills/
+.github/workflows/publish-plugin-source.yml
+chatgpt-edu-research-assistant.zip
+AGENT_INSTRUCTIONS.md
+TEST_PLAN.md
+```
 
-## Verification status
+The manually triggered publishing workflow safely expands the reviewed ZIP, checks archive paths and six skill entry points, and commits the source and marketplace to this repository. It does not execute scripts inside the skills. It refuses to overwrite independently edited plugin source. The checked-in `plugins/` directory is the source used by ChatGPT marketplace imports.
 
-The package's JSON, six skill entry points, local Markdown links, and archive structure were checked. The native agent was created and all six attached skill names were verified in the builder. The scenarios in `TEST_PLAN.md` are a manual acceptance plan; they have not yet been executed end to end.
+## Existing Workspace Agent
+
+[Open ChatGPT EDU Research Assistant](https://chatgpt.com/agents/a/agt_6aa91eea812881a4a8421047e2d5909b).
+
+The agent was created privately for its owner. The link does not grant access to other accounts or workspaces. Agent access and plugin installation are separate.
+
+The original ZIP also includes `packages/` with six separate skill ZIP files for the Agent Builder. See `AGENT_INSTRUCTIONS.md` for manual agent configuration.
+
+## Verification and limits
+
+JSON, six skill entry points, local Markdown links, and archive structure have been checked. GitHub source publication passed its workflow checks. `TEST_PLAN.md` contains the behavioral acceptance scenarios; they have not been executed end to end. This is not an official OpenAI plugin and is not a substitute for institutional ethics, statistical, or grant-eligibility review.
 
 ## License
 
-MIT. Third-party source materials remain subject to their original licenses and terms.
+MIT for the authored integration. Supplied and third-party source materials retain their original licenses and terms.
