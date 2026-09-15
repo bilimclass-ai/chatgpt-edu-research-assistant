@@ -1,18 +1,20 @@
 # ChatGPT EDU Research Assistant
 
+Developer: **Bilim AI**. Version **1.0.2** updates publisher metadata, organization links, and the supplied light/dark Bilim AI logos. The six skills are unchanged.
+
 Ғылыми әдебиет, зерттеу мониторингі, Қазақстан гранттары және SPSS/jamovi бойынша қазақша, орысша және ағылшынша жұмыс істейтін плагин.
 
 This repository contains an installable six-skill ChatGPT/Codex plugin and a GitHub marketplace catalog. It does not require an MCP server, API key, or a new external app connection. Tool availability still depends on the host workspace.
 
 ## Install in ChatGPT EDU
 
-For a one-time installation, download `chatgpt-edu-research-assistant-v1.0.1.tar.gz`, then use **Admin > Plugins > Add > Upload plugin**. After adding it to the workspace, install it in your own account from the plugin directory. The ZIP is the original Agent Builder bundle, not the ChatGPT plugin-upload format.
+For a new one-time installation, download [chatgpt-edu-research-assistant-bilim-ai-v1.0.2.tar.gz](chatgpt-edu-research-assistant-bilim-ai-v1.0.2.tar.gz), then use **Admin > Plugins > Add > Upload plugin**. After adding it to the workspace, install it in your own account from the plugin directory. If the plugin already exists, do not delete it or create a duplicate to update branding; preserve its ID and installation policies. The ZIP is the original Agent Builder bundle, not the latest plugin version.
 
 GitHub synchronization requires an authorized GitHub connection and may require MFA. Without that connection, use the archive installation; it does not enable automatic synchronization.
 
 A workspace administrator can import this repository using **Admin > Plugins > Add > Import marketplace**:
 
-- Source: `https://github.com/nurzhanabdirazakov/chatgpt-edu-research-assistant`
+- Source: `https://github.com/bilimclass-ai/chatgpt-edu-research-assistant`
 - Path: leave empty.
 - Branch, tag, or commit: leave empty for the default branch, or pin a reviewed commit.
 
