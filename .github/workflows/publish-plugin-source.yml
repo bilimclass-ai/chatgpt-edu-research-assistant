@@ -56,7 +56,15 @@ jobs:
           else:
               catalog.parent.mkdir(parents=True, exist_ok=True)
               catalog.write_text(json.dumps(marketplace, indent=2) + "\n")
-          print("Validated six skills, manifest, icon, safe archive paths, and marketplace.")
+          for agent_file in (destination / "skills").glob("*/agents/openai.yaml"):
+              text = agent_file.read_text(encoding="utf-8")
+              for indent in ("  ", "    "):
+                  old = "  products:\n" + "".join(indent + "- " + product + "\n" for product in ("chatgpt", "codex", "api", "atlas"))
+                  text = text.replace(old, "")
+              agent_file.write_text(text, encoding="utf-8")
+          manifest["version"] = "1.0.1"
+          (destination / ".codex-plugin/plugin.json").write_text(json.dumps(manifest, indent=2) + "\n")
+          print("Validated six skills, manifest, icon, safe archive paths, and marketplace; normalized v1.0.1 metadata.")
       - name: Commit source and marketplace to this repository
         run: |
           git config user.name "github-actions[bot]"
@@ -68,3 +76,4 @@ jobs:
             git commit -m "Publish six-skill research plugin and GitHub marketplace"
             git push origin HEAD:main
           fi
+
