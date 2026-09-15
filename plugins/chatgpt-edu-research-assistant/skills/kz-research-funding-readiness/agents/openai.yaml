@@ -1,0 +1,15 @@
+interface:
+  display_name: Kazakhstan Research Funding Readiness
+  short_description: Check eligibility, budgets and submission evidence
+  default_prompt: Use $kz-research-funding-readiness to audit my university or research
+    institute application against the applicable Kazakhstan funding rules and competition
+    documents.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

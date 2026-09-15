@@ -1,0 +1,15 @@
+interface:
+  display_name: 'Қазақстан: ғылыми грант көмекшісі'
+  short_description: 'ЖОО мен ҒЗИ: ғылыми грант өтінімін іріктеуге дайындау'
+  default_prompt: '$kazakhstan-science-grants көмегімен университетімнің немесе ҒЗИ-дың
+    ғылыми грант өтінімін іріктеуге дайында: конкурс талаптарын тексер, ғылыми мазмұнын
+    күшейт, бюджет пен құжаттардағы олқылықтарды түзет.'
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

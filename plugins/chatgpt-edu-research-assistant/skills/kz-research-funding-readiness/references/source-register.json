@@ -1,0 +1,59 @@
+{
+  "review_date": "2026-09-07",
+  "uploads": [
+    {
+      "source_id": "TRAVEL",
+      "title": "NCSTE board decision No. 1, 20 January 2025",
+      "uploaded_filename": "(4-po-spisku).pdf",
+      "pdf_pages": 4,
+      "sha256": "fbe64b23c37162dbe8b0e864df899a52ef1c31b8e9684a4a9231d048e9ddfe59",
+      "status": "Reviewer/monitor travel only; scanned cover visually verified",
+      "review_date": "2026-09-07"
+    },
+    {
+      "source_id": "FUND",
+      "title": "Order No. 563, 6 November 2023, registration 33613",
+      "uploaded_filename": "-()-_(~1.PDF",
+      "pdf_pages": 118,
+      "sha256": "14a95f16683735705980059eb240c594ca3f97ce7c8e6152dc17ffec5fbb6175",
+      "status": "Upload includes amendments No. 629/2024, No. 213/2026 and No. 336 of 14 July 2026",
+      "review_date": "2026-09-07"
+    },
+    {
+      "source_id": "APPEAL-BASE",
+      "title": "Order No. 423, 18 August 2023, registration 33328",
+      "uploaded_filename": "appelyaczionnaya-komissiya.-24-01-2024-15-30-16.pdf",
+      "pdf_pages": 8,
+      "sha256": "e56ec06ce32bb5927f34ea44e156da0cd7a2fb7b588180b1caae7419f2967533",
+      "status": "Older base; apply verified 2026 amendment No. 169",
+      "review_date": "2026-09-07"
+    },
+    {
+      "source_id": "ROSTER-BASE",
+      "title": "Order No. 94, 6 March 2025",
+      "uploaded_filename": "prikaz-rus-(2)0306123109-(5-po-spisku).-13-05-2025-11-02-39.pdf",
+      "pdf_pages": 39,
+      "sha256": "cc9a11e4352c770fe84a1a4f1d098d20d16d7dd38a1ae966f7f8d988ccf577f4",
+      "status": "Roster; scanned first two pages visually verified; commercialization section superseded by No. 238/2026",
+      "review_date": "2026-09-07"
+    },
+    {
+      "source_id": "LAW",
+      "title": "Law No. 103-VIII, 1 July 2024",
+      "uploaded_filename": "О науке и технологической политике.pdf",
+      "pdf_pages": 69,
+      "sha256": "09670a555011bffb6c8a65468124fa4f222c607d703a62ba5cec7183f059f2a0",
+      "status": "Upload includes 2026 changes AND prospective notes for No. 321-VIII; not a fully applied September 2026 consolidation",
+      "review_date": "2026-09-07"
+    },
+    {
+      "source_id": "NNS-BASE",
+      "title": "Order No. 487, 25 September 2023, registration 33466",
+      "uploaded_filename": "Об утверждении положения о национальных научных советах.pdf",
+      "pdf_pages": 85,
+      "sha256": "cff6a091d045fc51bf6a2cd248516728ae7cb55c01f32e0fcb77476c5480a546",
+      "status": "Upload includes No. 180/2024 and No. 607/2024; later amendment V2600039378 discovered but text not verified",
+      "review_date": "2026-09-07"
+    }
+  ]
+}

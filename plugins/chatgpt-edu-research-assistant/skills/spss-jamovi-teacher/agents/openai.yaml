@@ -1,0 +1,4 @@
+interface:
+  display_name: "SPSS & jamovi — Қазақша · Русский · English"
+  short_description: "SPSS пен jamovi-ді нөлден, қарапайым тілмен үйрену"
+  default_prompt: "Use $spss-jamovi-teacher: Маған SPSS немесе jamovi-ді нөлден түсіндір. Алдымен үш нақтылаушы сұрақ қой, кейін қарапайым мысалмен қадамдап үйрет."

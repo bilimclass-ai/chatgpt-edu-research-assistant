@@ -1,0 +1,14 @@
+interface:
+  display_name: ChatGPT EDU Research Assistant
+  short_description: Research evidence, grants, monitoring and statistics
+  default_prompt: Use $chatgpt-edu-research-assistant to route my research task to the right verified workflow and carry context across stages.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+    - chatgpt
+    - codex
+    - api
+    - atlas
+  allow_implicit_invocation: true
+

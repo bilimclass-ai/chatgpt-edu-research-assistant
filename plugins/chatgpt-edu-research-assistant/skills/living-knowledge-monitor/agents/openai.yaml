@@ -1,0 +1,15 @@
+interface:
+  display_name: Living Knowledge Monitor
+  short_description: Research intelligence mapped to your goals
+  default_prompt: Use $living-knowledge-monitor in guided pilot mode to create a verified
+    seven-day digest with action labels, confidence badges, thesis mappings, opportunities,
+    collaborators, and no recurring activation yet.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

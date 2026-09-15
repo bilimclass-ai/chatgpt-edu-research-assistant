@@ -1,0 +1,131 @@
+{
+  "monitor_id": "replace-with-stable-id",
+  "topic": "Replace with research area",
+  "audience": "Professor or instructor",
+  "intended_uses": ["research", "teaching", "funding", "recruitment", "collaboration"],
+  "institution": "",
+  "output_language": "English",
+  "word_budget": {
+    "total_words": 1200,
+    "executive_summary_words": 180,
+    "count_all_output_languages_together": true
+  },
+  "search_languages": ["English"],
+  "cadence": "weekly",
+  "timezone": "Asia/Qyzylorda",
+  "delivery_day": "Monday",
+  "coverage_days_fallback": 7,
+  "research_intelligence_features": {
+    "action_labels": true,
+    "confidence_badges": true,
+    "thesis_evidence_matrix": false,
+    "eligibility_precheck": true,
+    "conference_pipeline": true,
+    "collaboration_dossiers": true,
+    "contradiction_tracker": true,
+    "instrument_library": true,
+    "monthly_synthesis": true,
+    "feedback_personalization": true
+  },
+  "thesis_context": {
+    "title": "",
+    "chapters": [],
+    "constructs_or_variables": [],
+    "research_questions": [],
+    "methods_under_consideration": [],
+    "populations_or_contexts": []
+  },
+  "keywords": [],
+  "priority_subtopics": [],
+  "exclude_topics": [],
+  "geographies": ["global"],
+  "enabled_categories": [
+    "publications",
+    "journal_special_issues_and_series",
+    "lab_and_technology_news",
+    "standards_and_regulation",
+    "conferences_workshops_and_summer_schools",
+    "scholarships_and_mobility",
+    "phd_postdoc_fellowship",
+    "funding_and_grants",
+    "academic_jobs_internships_and_visiting_positions",
+    "funded_conferences",
+    "academic_communities_and_consortia",
+    "featured_professor",
+    "course_implications"
+  ],
+  "preferred_sources": [],
+  "excluded_sources": [],
+  "academic_source_registry": {
+    "use_catalog_defaults": true,
+    "record_source_coverage": true,
+    "always_review": [
+      "OpenAlex",
+      "Crossref Metadata Search",
+      "Google Scholar",
+      "Scopus when institutional access is available",
+      "Web of Science when institutional access is available"
+    ],
+    "enabled_source_sets": [
+      "cross-disciplinary scholarly indexes",
+      "discipline databases",
+      "preprints and repositories",
+      "conferences and calls for papers",
+      "funding scholarships and mobility",
+      "academic jobs internships and visiting positions",
+      "researchers laboratories and academic communities",
+      "journal special issues and series",
+      "publication integrity",
+      "policy standards and higher education"
+    ],
+    "rotate_optional_sources": true,
+    "subscription_access_notes": "",
+    "custom_always_review_urls": []
+  },
+  "opportunity_preferences": {
+    "career_stages": ["scholarship", "PhD", "PostDoc", "fellowship", "grant", "internship", "visiting position", "research job", "mobility"],
+    "eligibility_notes": "",
+    "preferred_locations": ["global"],
+    "remote_or_relocation_notes": "",
+    "minimum_deadline_notice_days": 14,
+    "include_calls_opening_before_next_report": true,
+    "conference_funding_required_for_funded_label": true
+  },
+  "research_register": {
+    "enabled": false,
+    "google_spreadsheet_id": "",
+    "preserve_user_notes": true,
+    "update_after_successful_digest": true
+  },
+  "monthly_synthesis": {
+    "enabled": true,
+    "delivery_rule": "first successful run after month end",
+    "include_profile_change_proposals": true
+  },
+  "feedback_preferences": {
+    "allowed_labels": ["Useful", "Not useful", "Already known", "Too broad", "Follow up"],
+    "require_approval_for_profile_changes": true,
+    "treat_negative_feedback_as_hard_exclusion": false
+  },
+  "collaboration_preferences": {
+    "goals": [],
+    "preferred_regions": ["global"],
+    "preferred_institution_types": [],
+    "exclude_people_or_institutions": []
+  },
+  "course_context": {
+    "course_catalog_paths": [],
+    "syllabus_paths": [],
+    "curriculum_review_dates": [],
+    "academic_calendar_paths": [],
+    "quality_report_paths": []
+  },
+  "digest_limits": {
+    "maximum_total_items": 15,
+    "maximum_publications": 6,
+    "maximum_opportunities": 5,
+    "maximum_journal_calls": 3,
+    "maximum_community_announcements": 2,
+    "featured_professors": 1
+  }
+}

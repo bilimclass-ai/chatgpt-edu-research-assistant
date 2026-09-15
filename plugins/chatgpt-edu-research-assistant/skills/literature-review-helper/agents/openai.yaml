@@ -1,0 +1,15 @@
+interface:
+  display_name: Әдебиетке шолу көмекшісі | Помощник по обзору литературы
+  short_description: 'Literature review: іздеу, талдау / поиск, анализ'
+  default_prompt: Use $literature-review-helper to prepare a verified literature evidence
+    workbook for my research question, with methods, findings, limitations, comparisons
+    and sources, leaving the chapter writing to me.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

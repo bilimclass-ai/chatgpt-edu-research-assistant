@@ -1,0 +1,25 @@
+{
+  "monitor_id": "replace-with-stable-id",
+  "run_date": "YYYY-MM-DD",
+  "coverage_start": "YYYY-MM-DD",
+  "coverage_end": "YYYY-MM-DD",
+  "planned_sources": 0,
+  "checked_sources": 0,
+  "unavailable_sources": 0,
+  "sources": [
+    {
+      "name": "Source name",
+      "url": "https://example.org/",
+      "evidence_role": "index|discovery|verification|integrity",
+      "category": "publications|journal calls|conferences|opportunities|researchers|policy|other",
+      "required_by": "always_review|preferred|category|discipline|geography|rotation",
+      "checked_at": "YYYY-MM-DDTHH:MM:SS+00:00",
+      "query_or_filter_summary": "",
+      "results_before_screening": null,
+      "included_in_digest": 0,
+      "status": "checked|no relevant update|inaccessible|subscription unavailable|blocked|skipped with reason",
+      "limitation_or_skip_reason": ""
+    }
+  ]
+}
+

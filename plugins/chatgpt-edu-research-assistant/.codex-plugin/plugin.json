@@ -1,0 +1,43 @@
+{
+  "name": "chatgpt-edu-research-assistant",
+  "version": "1.0.0",
+  "description": "A multilingual ChatGPT EDU research assistant for literature reviews, research monitoring, Kazakhstan grant readiness, and SPSS/jamovi support.",
+  "author": {
+    "name": "Nurzhan Abdirazakov",
+    "url": "https://github.com/nurzhanabdirazakov"
+  },
+  "homepage": "https://github.com/nurzhanabdirazakov/chatgpt-edu-research-assistant",
+  "repository": "https://github.com/nurzhanabdirazakov/chatgpt-edu-research-assistant",
+  "license": "MIT",
+  "keywords": [
+    "chatgpt-edu",
+    "research",
+    "literature-review",
+    "kazakhstan",
+    "grants",
+    "spss",
+    "jamovi"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ChatGPT EDU Research Assistant",
+    "shortDescription": "Research evidence, grants, monitoring and statistics",
+    "longDescription": "A bilingual and trilingual research workflow for universities and research institutes: verified literature reviews, living research intelligence, Kazakhstan grant drafting and readiness audits, and beginner-friendly SPSS/jamovi teaching.",
+    "developerName": "Nurzhan Abdirazakov",
+    "category": "Education",
+    "capabilities": [
+      "Research",
+      "Analysis",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/nurzhanabdirazakov/chatgpt-edu-research-assistant",
+    "defaultPrompt": [
+      "Build an evidence map for my research question.",
+      "Audit my Kazakhstan grant application.",
+      "Teach me this analysis in SPSS or jamovi."
+    ],
+    "brandColor": "#0B6E69",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "data_status": "Original synthetic teaching data; no empirical findings",
+  "direction": "post - pre",
+  "test": "two-sided paired Student t-test, null mean difference = 0",
+  "n_pairs": 12,
+  "df": 11,
+  "pre_mean": 63.5,
+  "pre_sd": 8.979775255337053,
+  "post_mean": 67.0,
+  "post_sd": 10.08148618192594,
+  "mean_difference": 3.5,
+  "sd_difference": 1.4459976109624424,
+  "t": 8.38476879979925,
+  "p_two_sided": 4.167602623735766e-06,
+  "ci_level": 0.95,
+  "ci_mean_difference": [
+    2.581256950041941,
+    4.418743049958059
+  ],
+  "cohen_dz": 2.4204742618284363,
+  "effect_definition": "Cohen dz = mean(post-pre) / sample SD(post-pre), not all paired d definitions",
+  "calculation_provenance": "Python SciPy 1.18.1 ttest_rel and standard-library descriptive/formula cross-check; not native SPSS or jamovi output",
+  "native_execution_status": "Not run in SPSS or jamovi during skill creation",
+  "display_tolerance": 0.005
+}

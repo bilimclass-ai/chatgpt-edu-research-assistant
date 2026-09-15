@@ -1,0 +1,60 @@
+{
+  "synthetic": true,
+  "scoring_rule": "99 = missing; q3r = 6 - q3; score requires all four valid items",
+  "rows": [
+    {
+      "id": 1,
+      "q3r": 2,
+      "n_valid": 4,
+      "score": 1.75
+    },
+    {
+      "id": 2,
+      "q3r": 1,
+      "n_valid": 4,
+      "score": 2.25
+    },
+    {
+      "id": 3,
+      "q3r": 4,
+      "n_valid": 4,
+      "score": 3.25
+    },
+    {
+      "id": 4,
+      "q3r": 3,
+      "n_valid": 4,
+      "score": 3.75
+    },
+    {
+      "id": 5,
+      "q3r": 5,
+      "n_valid": 4,
+      "score": 4.5
+    },
+    {
+      "id": 6,
+      "q3r": 4,
+      "n_valid": 4,
+      "score": 3.25
+    },
+    {
+      "id": 7,
+      "q3r": 4,
+      "n_valid": 3,
+      "score": null
+    },
+    {
+      "id": 8,
+      "q3r": null,
+      "n_valid": 0,
+      "score": null
+    }
+  ],
+  "complete_n": 6,
+  "mean_score": 3.125,
+  "raw_cronbach_alpha_complete_cases": 0.7658979734451432,
+  "provenance": "Python standard-library calculation; raw alpha checked by variance and covariance definitions",
+  "native_execution": "Not run in jamovi; do not label this as native jamovi output",
+  "interpretation_limit": "Tiny synthetic example for scoring and software practice, not validation of a scale"
+}

@@ -1,0 +1,468 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Literature evidence audit bundle v2",
+  "type": "object",
+  "required": [
+    "manifest",
+    "records",
+    "claims",
+    "searches"
+  ],
+  "properties": {
+    "manifest": {
+      "type": "object",
+      "required": [
+        "skill_version",
+        "search_date",
+        "question",
+        "minimum_core",
+        "required_indexes",
+        "quotes_required",
+        "reported_core"
+      ],
+      "properties": {
+        "skill_version": {
+          "const": "2.0.1"
+        },
+        "search_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minimum_core": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "required_indexes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "quotes_required": {
+          "enum": [
+            "all_core",
+            "selected",
+            "none"
+          ]
+        },
+        "reported_core": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "accepted_index_levels": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "direct_record",
+              "official_list",
+              "publisher_claim",
+              "catalog_claim",
+              "unverified"
+            ]
+          },
+          "description": "Protocol-approved evidence levels; defaults to direct_record and official_list. Weaker levels never imply direct verification."
+        },
+        "allow_abstract_core": {
+          "type": "boolean",
+          "default": false
+        },
+        "max_quote_words": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "year",
+          "status",
+          "access",
+          "identity_verified",
+          "source_url",
+          "bibliography",
+          "relevance",
+          "design",
+          "findings",
+          "limitations",
+          "integrity",
+          "index_evidence",
+          "metrics",
+          "quotes"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "year": {
+            "type": "integer"
+          },
+          "doi": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "study_family": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "enum": [
+              "core",
+              "supplementary",
+              "excluded",
+              "awaiting_full_text"
+            ]
+          },
+          "access": {
+            "enum": [
+              "full_text",
+              "abstract",
+              "metadata"
+            ]
+          },
+          "identity_verified": {
+            "type": "boolean"
+          },
+          "source_url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "bibliography": {
+            "type": "string",
+            "minLength": 1
+          },
+          "relevance": {
+            "type": "string",
+            "minLength": 1
+          },
+          "design": {
+            "type": "string",
+            "minLength": 1
+          },
+          "findings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "text",
+                "locator",
+                "basis"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "locator": {
+                  "type": "string"
+                },
+                "basis": {
+                  "enum": [
+                    "author_report",
+                    "reviewer_inference"
+                  ]
+                }
+              }
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "text",
+                "basis"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string"
+                },
+                "basis": {
+                  "enum": [
+                    "author_report",
+                    "reviewer_inference"
+                  ]
+                }
+              }
+            }
+          },
+          "integrity": {
+            "type": "object",
+            "required": [
+              "status",
+              "checked_on",
+              "source"
+            ],
+            "properties": {
+              "status": {
+                "enum": [
+                  "no_notice_found",
+                  "corrected",
+                  "expression_of_concern",
+                  "retracted",
+                  "not_checked"
+                ]
+              },
+              "checked_on": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "index_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "level",
+                "verified",
+                "checked_on",
+                "source"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "level": {
+                  "enum": [
+                    "direct_record",
+                    "official_list",
+                    "publisher_claim",
+                    "catalog_claim",
+                    "unverified"
+                  ]
+                },
+                "verified": {
+                  "type": "boolean"
+                },
+                "checked_on": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "source": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "metrics": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "entity",
+                "provider",
+                "value",
+                "observed_on",
+                "source"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "entity": {
+                  "enum": [
+                    "work",
+                    "venue",
+                    "author"
+                  ]
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "observed_on": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "source": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            }
+          },
+          "quotes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "text",
+                "source_text",
+                "source_url",
+                "version",
+                "citation",
+                "verified",
+                "locator"
+              ],
+              "properties": {
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_text": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source_url": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "citation": {
+                  "type": "string"
+                },
+                "verified": {
+                  "type": "boolean"
+                },
+                "locator": {
+                  "type": "object",
+                  "properties": {
+                    "printed_page": {
+                      "type": [
+                        "string",
+                        "integer",
+                        "null"
+                      ]
+                    },
+                    "pdf_page": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "minimum": 1
+                    },
+                    "section": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "paragraph": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "minimum": 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text",
+          "support_ids",
+          "counter_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "support_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "counter_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "searches": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "provider",
+          "query",
+          "date",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "query": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "status": {
+            "enum": [
+              "ok",
+              "zero_results",
+              "failed",
+              "user_export"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
